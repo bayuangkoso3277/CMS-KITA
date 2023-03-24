@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preclinic.dreamguystech.com/template/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Mar 2023 01:19:06 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="{{url('/assets')}}/img/favicon.png">
-    <title>Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
-
+    <title>Clinic Management System kita berkarya</title>
     <link rel="stylesheet" type="text/css" href="{{url('/assets')}}/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="{{url('/assets')}}/plugins/feather/feather.css">
-
     <link rel="stylesheet" href="{{url('/assets')}}/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="{{url('/assets')}}/plugins/fontawesome/css/all.min.css">
-
+    <link rel="stylesheet" href="{{url('/assets')}}/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="{{url('/assets')}}/plugins/datatables/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="{{url('/assets')}}/css/style.css">
 </head>
 
@@ -42,26 +38,49 @@
                                     <div class="account-logo">
                                         <a href="index.html"><img src="{{url('/assets')}}/img/login-logo.png" alt=""></a>
                                     </div>
-                                    <h2>Getting Started</h2>
-
+                                    <h2>Selamat Datang</h2>
+                                    <ul class="nav nav-tabs nav-tabs-solid nav-tabs-rounded nav-justified">
+                                        <li class="nav-item"><a class="nav-link active" href="#solid-rounded-justified-tab1" data-bs-toggle="tab">Pasien Lama</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#solid-rounded-justified-tab3" data-bs-toggle="tab">Pasien Baru</a></li>
+                                    </ul>
                                     <form action="https://preclinic.dreamguystech.com/template/login.html">
-                                        <div class="form-group">
-                                            <label>Full Name <span class="login-danger">*</span></label>
-                                            <input class="form-control" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Email <span class="login-danger">*</span></label>
-                                            <input class="form-control" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Password <span class="login-danger">*</span></label>
-                                            <input class="form-control pass-input" type="password">
-                                            <span class="profile-views feather-eye-off toggle-password"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Confirm Password <span class="login-danger">*</span></label>
-                                            <input class="form-control pass-input-confirm" type="password">
-                                            <span class="profile-views feather-eye-off confirm-password"></span>
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="solid-rounded-justified-tab1">
+                                                <div class="form-group">
+                                                    <label>No Pasien<span class="login-danger">*</span></label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>No Hp<span class="login-danger">*</span></label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="solid-rounded-justified-tab3">
+                                                <div class="form-group">
+                                                    <label>Nama<span class="login-danger">*</span></label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Tempat Lahir<span class="login-danger">*</span></label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group local-forms cal-icon">
+                                                    <label>Tanggal Lahir<span class="login-danger">*</span></label>
+                                                    <input class="form-control datetimepicker" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>No Hp</label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>No KTP</label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group login-btn">
                                             <button class="btn btn-primary btn-block" type="submit">Sign up</button>
@@ -79,11 +98,13 @@
 
 
     <script src="{{url('/assets')}}/js/jquery-3.6.1.min.js"></script>
-
     <script src="{{url('/assets')}}/js/bootstrap.bundle.min.js"></script>
-
+    <script src="{{url('/assets')}}/js/jquery.slimscroll.js"></script>
     <script src="{{url('/assets')}}/js/feather.min.js"></script>
-
+    <script src="{{url('/assets')}}/plugins/moment/moment.min.js"></script>
+    <script src="{{url('/assets')}}/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{url('/assets')}}/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="{{url('/assets')}}/plugins/datatables/datatables.min.js"></script>
     <script src="{{url('/assets')}}/js/app.js"></script>
 </body>
 

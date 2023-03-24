@@ -1349,7 +1349,7 @@ textarea.form-control {
 .login-wrapper .loginbox .login-right h2 {
 	font-size: 26px;
 	font-weight: 600;
-	margin-bottom: 40px;
+	margin-bottom: 18px;
 }
 .login-wrapper .loginbox .login-right .forgotpass {
 	display: -webkit-box;
@@ -1456,7 +1456,7 @@ textarea.form-control {
     width: 100%;
 }
 .account-logo {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	text-align: left;
 }
 .login-right .btn-primary {
@@ -1565,8 +1565,9 @@ textarea.form-control {
 	width: 100%;
 }
 .login-wrapper .loginbox .login-right {
-	padding: 50px;
+	padding: 30px;
 	width: 100%;
+	padding-bottom: 0px;
 }
 
 /*-----------------
