@@ -229,6 +229,20 @@ table.table td h2 span {
 .table-nowrap td, .table-nowrap th {
     white-space: nowrap;
 }
+
+/*-----------------
+Antrian
+*/
+.dash-content .counter-no{
+	font-size: 40px;
+}
+.counter-count{
+	font-size: 68px;
+    margin: 31px 0px;
+}
+.counter-count-bottom{
+	font-size: 40px;
+}
 /*-----------------
 	3. Helper Class
 -----------------------*/
@@ -1589,6 +1603,9 @@ textarea.form-control {
 	width: 50px;
 	height: 50px;
 	margin-bottom: 10px;
+}
+.antrian {
+	text-align: center;
 }
 .dash-content h4 {
 	font-size: 16px;
