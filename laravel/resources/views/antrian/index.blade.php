@@ -31,7 +31,7 @@
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-8 youtube">
                     <div class="dash-widget">
                         <div class="dash-content">
-                            <iframe width="100%" height="380" src="http://www.youtube.com/embed/EqFxFJ54X6A?autoplay=1&loop=1&playlist=EqFxFJ54X6A&rel=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="100%" height="380" src="https://www.youtube.com/embed/EqFxFJ54X6A?autoplay=1&loop=1&playlist=EqFxFJ54X6A&rel=0&controls=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
