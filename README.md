@@ -1,4 +1,3 @@
-
 # CMS - Clinic Management System
 
 
@@ -53,4 +52,3 @@ Install my-project with npm
 
 
 ![Logo](https://kitaberkarya.com/assets/images/logo3.jpg)
-
