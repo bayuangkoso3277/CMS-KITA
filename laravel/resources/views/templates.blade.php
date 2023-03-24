@@ -36,14 +36,14 @@
                             <div class="login-right">
                                 <div class="login-right-wrap">
                                     <div class="account-logo">
-                                        <a href="index.html"><img src="{{url('/assets')}}/img/login-logo.png" alt=""></a>
+                                        <a href="{{url('')}}"><img src="{{url('/assets')}}/img/login-logo.png" alt=""></a>
                                     </div>
                                     <h2>Selamat Datang</h2>
                                     <ul class="nav nav-tabs nav-tabs-solid nav-tabs-rounded nav-justified">
                                         <li class="nav-item"><a class="nav-link active" href="#solid-rounded-justified-tab1" data-bs-toggle="tab">Pasien Lama</a></li>
                                         <li class="nav-item"><a class="nav-link" href="#solid-rounded-justified-tab3" data-bs-toggle="tab">Pasien Baru</a></li>
                                     </ul>
-                                    <form action="https://preclinic.dreamguystech.com/template/login.html">
+                                    <form action="">
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="solid-rounded-justified-tab1">
                                                 <div class="form-group">
