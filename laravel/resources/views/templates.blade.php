@@ -22,13 +22,14 @@
     <script src="{{url('/assets')}}/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="{{url('/assets')}}/plugins/datatables/datatables.min.js"></script>
     <script src="{{url('/assets')}}/js/app.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=aOmOxqaK"></script>
 </head>
 
 <body>
     @yield('content')
 
 </body>
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=aOmOxqaK"></script>
+
 
 <!-- Mirrored from preclinic.dreamguystech.com/template/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Mar 2023 01:19:06 GMT -->
 

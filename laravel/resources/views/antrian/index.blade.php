@@ -91,4 +91,7 @@
         </div>
     </div>
 </div>
+<script>
+    responsiveVoice.speak("Antrian Nomor A 0 10  Ke Loket 1",'Indonesian Female');
+</script>
 @endsection
