@@ -1,9 +1,10 @@
 @extends('templates')
+@section('content')
 <div class="main-wrapper">
     <div class="header">
         <div class="header-left">
             <a href="index.html" class="logo">
-            <img src="assets/img/logo.png" width="35" height="35" alt=""> <span>CMS</span>
+            <img src="{{url('/assets')}}/img/logo.png" width="35" height="35" alt=""> <span>CMS</span>
             </a>
         </div>
     </div>
@@ -66,3 +67,4 @@
         </div>
     </div>
 </div>
+@endsection
