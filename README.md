@@ -13,6 +13,19 @@ Install my-project with npm
   cd CMSKITA
   Composer install
 ```
+```bash
+<virtualhost *:80>
+    ServerName cms.kitaberkarya
+    DocumentRoot "D:/Project/CMS-KITA/CMSApps"
+   <directory D:/Project/CMS-KITA/CMSApps>
+        Options Indexes FollowSymLinks MultiViews   
+    	AllowOverride all 
+    	Order Deny,Allow
+    	Allow from all
+    	Require all granted
+  </directory>
+</virtualhost>
+```
     
 ## Software
 
