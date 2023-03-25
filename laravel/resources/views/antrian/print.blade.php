@@ -63,7 +63,7 @@
     <p class="text-center">-----------------------------------</p>
     <div>
         <p style="float: left;">Tangal : {{ date('d-m-Y') }}</p>
-        <p style="float: right">Jam : {{ date('h:i:s') }}</p>
+        <p style="float: right">Jam : {{ date('H:i:s') }}</p>
     </div>
     <div class="clear-both" style="clear: both;"></div>
     <div>
@@ -77,7 +77,7 @@
     <div style="text-align:center">
         <span>Nomor Antrian</span>
         <br>
-        <span class="nomor">A1</span>
+        <span class="nomor">A001</span>
         <p>Simpan nomor antrian Anda</p>
         <p style="font-size:9pt">No. Antrian menjadi no panggil untuk tindakan selanjutnya.</p>
     </div>

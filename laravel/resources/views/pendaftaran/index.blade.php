@@ -50,42 +50,60 @@
                                         <li class="nav-item"><a class="nav-link active" href="#solid-rounded-justified-tab1" data-bs-toggle="tab">Pasien Lama</a></li>
                                         <li class="nav-item"><a class="nav-link" href="#solid-rounded-justified-tab3" data-bs-toggle="tab">Pasien Baru</a></li>
                                     </ul>
-                                    <form action="">
+                                    <form action="{{url('antrian')}}" method="post">
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="solid-rounded-justified-tab1">
                                                 <div class="form-group">
-                                                    <label>No Pasien<span class="login-danger">*</span></label>
-                                                    <input class="form-control" type="text">
+                                                    <label>No Rekam Medis<span class="login-danger">*</span></label>
+                                                    <input name="norm" class="form-control" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>No Hp<span class="login-danger">*</span></label>
-                                                    <input class="form-control" type="text">
+                                                    <input name="nohp_lama" class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                <label>Jenis</label>
+                                                    <select name="jenis_lama" class="form-control">
+                                                        <option>-- Select --</option>
+                                                        <option>BPJS</option>
+                                                        <option>Asuransi</option>
+                                                        <option>Umum</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="tab-pane" id="solid-rounded-justified-tab3">
                                                 <div class="form-group">
                                                     <label>Nama<span class="login-danger">*</span></label>
-                                                    <input class="form-control" type="text">
+                                                    <input name="nama" class="form-control" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Tempat Lahir<span class="login-danger">*</span></label>
-                                                    <input class="form-control" type="text">
+                                                    <input name="tempat_lahir" class="form-control" type="text">
                                                 </div>
                                                 <div class="form-group local-forms cal-icon">
                                                     <label>Tanggal Lahir<span class="login-danger">*</span></label>
-                                                    <input class="form-control datetimepicker" type="text">
+                                                    <input name="tgl_lahir" class="form-control datetimepicker" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Email</label>
-                                                    <input class="form-control" type="text">
+                                                    <input name="email" class="form-control" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>No Hp</label>
-                                                    <input class="form-control" type="text">
+                                                    <input name="nohp" class="form-control" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>No KTP</label>
-                                                    <input class="form-control" type="text">
+                                                    <input name="no_ktp" class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group ">
+                                                <label>Jenis</label>
+                                                    <select name="jenis" class="form-control">
+                                                        <option>-- Select --</option>
+                                                        <option>BPJS</option>
+                                                        <option>Asuransi</option>
+                                                        <option>Umum</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>

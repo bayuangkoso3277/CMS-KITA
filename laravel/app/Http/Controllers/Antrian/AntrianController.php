@@ -16,6 +16,7 @@ class AntrianController extends Controller
     public function print(){
         return view('antrian.print');
     }
+
     public function getAntrian(){
 
     }
