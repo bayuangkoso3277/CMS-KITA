@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Antrian\AntrianController;
+use App\Http\Controllers\Loket\LoketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('pendaftaran/index');
 });
 Route::get('/antrian', [AntrianController::class, 'index']);
+Route::get('/loket', [LoketController::class, 'index']);

@@ -26,11 +26,10 @@
 </head>
 
 <body>
+<div class="main-wrapper">
+    @include('include.header');
+    @include('include.sidebar')
     @yield('content')
-
+</div>
 </body>
-
-
-<!-- Mirrored from preclinic.dreamguystech.com/template/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Mar 2023 01:19:06 GMT -->
-
 </html>
