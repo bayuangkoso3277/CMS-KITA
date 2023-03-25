@@ -77,7 +77,7 @@
     <div style="text-align:center">
         <span>Nomor Antrian</span>
         <br>
-        <span class="nomor">A001</span>
+        <span class="nomor">A1</span>
         <p>Simpan nomor antrian Anda</p>
         <p style="font-size:9pt">No. Antrian menjadi no panggil untuk tindakan selanjutnya.</p>
     </div>
