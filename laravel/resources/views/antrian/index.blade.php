@@ -69,7 +69,7 @@
                     </div>
                     <div class="dash-widget">
                         <div class="dash-content antrian">
-                            <h2><div class="counter-count">A001-PG01</div></h2>
+                            <h2><div class="counter-count">A001</div></h2>
                         </div>
                     </div>
                     <div class="dash-widget">
@@ -93,7 +93,7 @@
                     <div class="dash-widget">
                         <div class="dash-content antrian">
                             <h3>Loket 2</h3>
-                            <h2><div class="counter-count-bottom">A002-UM02</div></h2>
+                            <h2><div class="counter-count-bottom">A002</div></h2>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     <div class="dash-widget">
                         <div class="dash-content antrian">
                             <h3>Loket 3</h3>
-                            <h2><div class="counter-count-bottom">A012-PA01</div></h2>
+                            <h2><div class="counter-count-bottom">U012</div></h2>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                     <div class="dash-widget">
                         <div class="dash-content antrian">
                             <h3>Loket 4</h3>
-                            <h2><div class="counter-count-bottom">A010-PG02</div></h2>
+                            <h2><div class="counter-count-bottom">U010</div></h2>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    responsiveVoice.speak("Antrian Nomor A 0 10  Ke Loket 1",'Indonesian Female');
+    responsiveVoice.speak("Antrian Nomor A 0 0 1  Ke Loket 1",'Indonesian Female');
 </script>
 </body>
 </html>
