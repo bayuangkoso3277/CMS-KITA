@@ -117,7 +117,7 @@
         </div>
     </div>
 </div>
-<script>
+<script type="text/javascript">
     responsiveVoice.speak("Antrian Nomor A 0 10  Ke Loket 1",'Indonesian Female');
 </script>
 </body>

@@ -18,5 +18,8 @@ use App\Http\Controllers\Loket\LoketController;
 Route::get('/', function () {
     return view('pendaftaran/index');
 });
-Route::get('/antrian', [AntrianController::class, 'index']);
+Route::controller(AntrianController::class)->group(function () {
+    Route::get('/antrian', 'index');
+    Route::get('/antrian/print', 'print');
+});
 Route::get('/loket', [LoketController::class, 'index']);
