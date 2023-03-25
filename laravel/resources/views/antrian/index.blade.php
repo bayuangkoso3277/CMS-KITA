@@ -87,7 +87,7 @@
             responsiveVoice.speak(data.message,'Indonesian Female');
         }
         $.each(data.antrian, function(key,value){
-            $('#loket'+value.id_counter).html((value.type_antrian==1?'A':'U')+value.no_antrian)
+            $('#loket'+value.id_counter).html((value.type_antrian==1?'A':'P')+value.no_antrian)
         })
     })
 },10000)

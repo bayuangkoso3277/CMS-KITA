@@ -24,7 +24,7 @@ class AntrianController extends Controller
         ->where('id_counter','<>',0)->first();
         $message="";
         if($data){
-            $pre = $data->type_antrian==1?'A':'U';
+            $pre = $data->type_antrian==1?'A':'P';
             $code ="";
             if($data->no_antrian<10){
                 $code=" 0 0 ".(int)$data->no_antrian;
