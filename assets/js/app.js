@@ -184,12 +184,12 @@ $(document).ready(function($) {
 	}
 	
 	// Page wrapper height
-	// var pHeight = $(window).height();
-	// $pageWrapper.css('min-height', pHeight);
-	// $(window).resize(function() {
-	// 	var prHeight = $(window).height();
-	// 	$pageWrapper.css('min-height', prHeight);
-	// });
+	var pHeight = $(window).height();
+	$pageWrapper.css('min-height', pHeight);
+	$(window).resize(function() {
+		var prHeight = $(window).height();
+		$pageWrapper.css('min-height', prHeight);
+	});
 	
 	// Datetimepicker
 	if($('.datetimepicker').length > 0) {

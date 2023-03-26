@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Antrian\AntrianController;
 use App\Http\Controllers\Loket\LoketController;
+use App\Http\Controllers\Poli\PoliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 });
 Route::get('/antrian', [AntrianController::class, 'index']);
 Route::get('/loket', [LoketController::class, 'index']);
+Route::get('/loket/pasien_lama', [LoketController::class, 'pasien_lama']);
+Route::get('/loket/pasien_baru', [LoketController::class, 'pasien_baru']);
+Route::get('/poli', [PoliController::class, 'index']);

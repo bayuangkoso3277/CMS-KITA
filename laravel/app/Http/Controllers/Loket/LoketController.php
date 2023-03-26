@@ -12,4 +12,13 @@ class LoketController extends Controller
     {
         return view('loket.index');
     }
+    public function pasien_lama()
+    {
+        return view('loket.pasien_lama.index');
+    }
+    public function pasien_baru()
+    {
+        return view('loket.pasien_baru.index');
+    }
+
 }
