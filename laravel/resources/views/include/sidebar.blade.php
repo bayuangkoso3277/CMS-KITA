@@ -8,6 +8,8 @@
                                 alt=""></span> <span> Loket </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a href="index.html">Panggil Antrian</a></li>
+                        <li><a href="index.html">Pasien Lama</a></li>
+                        <li><a href="index.html">Pasien Baru</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -22,6 +24,14 @@
                                 alt=""></span> <span>Pasien </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a href="patients.html">Pasien List</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-03.svg"
+                                alt=""></span> <span>Poli </span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="patients.html">Poli Gigi</a></li>
+                        <li><a href="patients.html">Poli Umum</a></li>
                     </ul>
                 </li>
                 <li>

@@ -23,4 +23,5 @@ Route::get('/antrian', [AntrianController::class, 'index']);
 Route::get('/loket', [LoketController::class, 'index']);
 Route::get('/loket/pasien_lama', [LoketController::class, 'pasien_lama']);
 Route::get('/loket/pasien_baru', [LoketController::class, 'pasien_baru']);
-Route::get('/poli', [PoliController::class, 'index']);
+Route::get('/poli/cek', [PoliController::class, 'index']);
+Route::get('/poli', [PoliController::class, 'view']);
