@@ -17,30 +17,40 @@ class AntrianController extends Controller
         if($reg->isMethod('post')){
             $noAntrian = CMSKITA::getNoAntrian($reg->input('norm')!=""?$reg->input('jenis_lama'):$reg->input('jenis'));
             $id="";
-            try {
+            //try {
                 if($reg->input('norm')!=""){
                     $cekNopasien = PatientModel::where('patient_no_rm',$reg->input('norm'))->first();
                     if($cekNopasien){
 
                     }
+                    $idPasien = $cekNopasien->patient_id;
                 }else{
-
+                    $newPasien = new PatientModel();
+                    $newPasien->patient_no_rm= CMSKITA::getLastPatient();
+                    $newPasien->patient_name=$reg->input('nama');
+                    $newPasien->patient_birthplace=$reg->input('tempat_lahir');
+                    $newPasien->patient_birthdate=date('Y-m-d',$reg->input('tgl_lahir'));
+                    $newPasien->patient_phone=$reg->input('no_hp');
+                    $newPasien->patient_no_ktp=$reg->input('no_ktp');
+                    $newPasien->patient_email=$reg->input('email');
+                    echo $newPasien->save();
+                    $idPasien=$newPasien->patient_id;
                 }
                 $antrian = new AntrianModel();
                 $antrian->no_antrian=$noAntrian;
                 $antrian->tgl_antrian = date('Y-m-d H:i:s');
                 $antrian->status=0;
                 $antrian->type_antrian=$reg->input('jenis_lama');
-                $antrian->id_pasien=$cekNopasien->patient_id;
+                $antrian->id_pasien=$idPasien;
                 $antrian->updated_at=null;
                 $antrian->id_counter=0;
                 $antrian->type=$reg->input('norm')!=""?'Lama':'Baru';
                 $antrian->save();
                 $id = $antrian->id;
                 return redirect('antrian/print/'.$id);
-            } catch (\Throwable $th) {
-                //throw $th;
-            }
+            // } catch (\Throwable $th) {
+            //     //throw $th;
+            // }
 
         }else{
             $counter=CounterModel::where('no_counter','<>','1')->get();

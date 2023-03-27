@@ -17,4 +17,19 @@ class CMSKITA
         }
         return $lastcode;
     }
+    public static function getLastPatient(){
+        $date=date('ymd');
+        $code = "PSN";
+        $sql = "select max(right(patient_no_rm,5)) lastcode from patients where substring(patient_no_rm,1,9)='".$code.$date."'";
+        $data = collect(\DB::select($sql))->first();
+        $lastcode = ($data->lastcode)+1;
+        if($lastcode<10){
+            $lastcode = '0000'.$lastcode;
+        }else if($lastcode<100){
+            $lastcode = '000'.$lastcode;
+        }else if($lastcode<1000){
+            $lastcode = '00'.$lastcode;
+        }
+        return $code.$date.$lastcode;
+    }
 }
