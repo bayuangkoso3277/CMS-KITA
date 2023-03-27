@@ -6,17 +6,53 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AntrianModel;
 use App\Models\CounterModel;
+use App\Models\PatientModel;
+use App\Helpers\CMSKITA;
 
 class AntrianController extends Controller
 {
 
-    public function index()
+    public function index(Request $reg)
     {
-        $counter=CounterModel::where('no_counter','<>','1')->get();
-        return view('antrian.index',compact('counter'));
+        if($reg->isMethod('post')){
+            $noAntrian = CMSKITA::getNoAntrian($reg->input('norm')!=""?$reg->input('jenis_lama'):$reg->input('jenis'));
+            $id="";
+            try {
+                if($reg->input('norm')!=""){
+                    $cekNopasien = PatientModel::where('patient_no_rm',$reg->input('norm'))->first();
+                    if($cekNopasien){
+
+                    }
+                }else{
+
+                }
+                $antrian = new AntrianModel();
+                $antrian->no_antrian=$noAntrian;
+                $antrian->tgl_antrian = date('Y-m-d H:i:s');
+                $antrian->status=0;
+                $antrian->type_antrian=$reg->input('jenis_lama');
+                $antrian->id_pasien=$cekNopasien->patient_id;
+                $antrian->updated_at=null;
+                $antrian->id_counter=0;
+                $antrian->type=$reg->input('norm')!=""?'Lama':'Baru';
+                $antrian->save();
+                $id = $antrian->id;
+                return redirect('antrian/print/'.$id);
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+
+        }else{
+            $counter=CounterModel::where('no_counter','<>','1')->get();
+            return view('antrian.index',compact('counter'));
+        }
+
     }
-    public function print(){
-        return view('antrian.print');
+    public function print($id){
+        $antrian = AntrianModel::where('id',$id)
+        ->join('patients as a','a.patient_id','=','antrian.id_pasien')
+        ->first();
+        return view('antrian.print',compact('antrian'));
     }
 
     public function getAntrian(){

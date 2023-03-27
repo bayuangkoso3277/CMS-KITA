@@ -62,14 +62,14 @@
     </div>
     <p class="text-center">-----------------------------------</p>
     <div>
-        <p style="float: left;">Tangal : {{ date('d-m-Y') }}</p>
-        <p style="float: right">Jam : {{ date('H:i:s') }}</p>
+        <p style="float: left;">Tangal : {{ date('d-m-Y', strtotime($antrian->tgl_antrian)) }}</p>
+        <p style="float: right">Jam : {{ date('H:i:s',strtotime($antrian->tgl_antrian)) }}</p>
     </div>
     <div class="clear-both" style="clear: both;"></div>
     <div>
-        <p>Pasien : Lama</p>
-        <p>No &nbsp; &nbsp; : 001-123-234</p>
-        <p>Nama &nbsp; : Indra </p>
+        <p>Pasien : {{$antrian->type}}</p>
+        <p>No &nbsp; &nbsp; : {{$antrian->patient_no_rm}}</p>
+        <p>Nama &nbsp; : {{$antrian->patient_name}} </p>
     </div>
     <div class="clear-both" style="clear: both;"></div>
     <p class="text-center">-----------------------------------</p>
@@ -77,7 +77,7 @@
     <div style="text-align:center">
         <span>Nomor Antrian</span>
         <br>
-        <span class="nomor">A001</span>
+        <span class="nomor">{{$antrian->type_antrian.$antrian->no_antrian}}</span>
         <p>Simpan nomor antrian Anda</p>
         <p style="font-size:9pt">No. Antrian menjadi no panggil untuk tindakan selanjutnya.</p>
     </div>
