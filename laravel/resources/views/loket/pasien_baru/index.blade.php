@@ -32,7 +32,7 @@
   <div class="row">
     <!-- Left side -->
     <div class="col-lg-8">
-      <!-- Basic information -->
+      <!-- Basic information --> 
       <div class="card mb-4">
         <div class="card-body">
           <div class="row">
