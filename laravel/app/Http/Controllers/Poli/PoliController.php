@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PoliController extends Controller
 {
-    //
+    // 
     public function index()
     {
         return view('poli.cek.index');
