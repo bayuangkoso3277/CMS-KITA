@@ -14,7 +14,7 @@ class PoliController extends Controller
     }
     public function view()
     {
-        return view('poli.view');
+        return view('poli.view'); 
     }
 
 }
