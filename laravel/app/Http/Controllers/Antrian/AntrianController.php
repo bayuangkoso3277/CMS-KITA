@@ -53,7 +53,7 @@ class AntrianController extends Controller
             }
 
         }else{
-            $counter=CounterModel::where('status','=','1')->get();
+            $counter=CounterModel::where('no_counter','<>','1')->where('status','=','1')->get();
             return view('antrian.index',compact('counter'));
         }
 

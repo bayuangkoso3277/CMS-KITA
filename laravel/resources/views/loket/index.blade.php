@@ -14,6 +14,54 @@
                 </div>
             </div>
         </div>
+        <div class="doctor-list-blk">
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget border-right-bg">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-01.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>30</h4>
+                    <h5>Waiting</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget border-right-bg">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-02.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>20</h4>
+                    <h5>Pasien Lama</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget border-right-bg">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-03.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>10</h4>
+                    <h5>Pasien Baru</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-04.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>60</h4>
+                    <h5>Total Pasien</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         <div class="row">
             <div class="col-sm-12">
