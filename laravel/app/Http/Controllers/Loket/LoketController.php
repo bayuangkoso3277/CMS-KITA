@@ -55,4 +55,16 @@ class LoketController extends Controller
 
          return json_encode($feedback);
     }
+
+    public function pasien_lama()
+    {
+        return view('loket.pasien_lama.index');
+    }
+
+    public function pasien_baru()
+    {
+        return view('loket.pasien_baru.index');
+    }
+
+
 }

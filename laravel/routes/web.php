@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Antrian\AntrianController;
 use App\Http\Controllers\Loket\LoketController;
 use App\Http\Controllers\RekamMedis\RekamMedisController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,10 +20,13 @@ Route::get('/', function () {
 });
 
 Route::controller(AntrianController::class)->group(function () {
-    Route::any('/antrian', 'index');
-    Route::get('/antrian/print/{id}', 'print');
+    Route::get('/antrian', 'index');
+    Route::get('/antrian/print', 'print');
+    Route::post('/antrian','store');
 });
 Route::controller(RekamMedisController::class)->group(function () {
     Route::get('/rekam-medis', 'index');
 });
 Route::get('/loket', [LoketController::class, 'index']);
+Route::get('/loket/pasien_lama', [LoketController::class, 'pasien_lama']);
+Route::get('/loket/pasien_baru', [LoketController::class, 'pasien_baru']);
