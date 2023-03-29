@@ -34,7 +34,7 @@ class LoketController extends Controller
 
             $counter = CounterModel::where('status','1')->get();
             foreach($counter as $c=>$cv){
-                $btnAction .='<a class="dropdown-item panggil" data-id="'.$value['id'].'" data-counter="'.$cv['no_counter'].'"  href="#"><i class="fa-solid fa-phone m-r-5"></i>Panggil di counter '.$cv['no_counter'].'</a>';
+                $btnAction .='<a class="dropdown-item panggil" data-id="'.$value['id'].'" data-counter="'.$cv['no_counter'].'"  href="#"><i class="fa-solid fa-phone m-r-5"></i>Panggil di loket '.$cv['no_counter'].'</a>';
             }
             $listData['action']='
                 <div class="dropdown dropdown-action">
