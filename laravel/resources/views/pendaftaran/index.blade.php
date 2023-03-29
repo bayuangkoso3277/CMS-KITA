@@ -51,6 +51,7 @@
                                         <li class="nav-item"><a class="nav-link" href="#solid-rounded-justified-tab3" data-bs-toggle="tab">Pasien Baru</a></li>
                                     </ul>
                                     <form action="{{url('antrian')}}" method="post">
+                                        @csrf
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="solid-rounded-justified-tab1">
                                                 <div class="form-group">
@@ -65,9 +66,9 @@
                                                 <label>Jenis</label>
                                                     <select name="jenis_lama" class="form-control">
                                                         <option>-- Select --</option>
-                                                        <option>BPJS</option>
-                                                        <option>Asuransi</option>
-                                                        <option>Umum</option>
+                                                        <option value="A">BPJS</option>
+                                                        <option value="C">Asuransi</option>
+                                                        <option value="P">Umum</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -100,9 +101,9 @@
                                                 <label>Jenis</label>
                                                     <select name="jenis" class="form-control">
                                                         <option>-- Select --</option>
-                                                        <option>BPJS</option>
-                                                        <option>Asuransi</option>
-                                                        <option>Umum</option>
+                                                        <option value="A">BPJS</option>
+                                                        <option Value="C">Asuransi</option>
+                                                        <option value="P">Umum</option>
                                                     </select>
                                                 </div>
                                             </div>

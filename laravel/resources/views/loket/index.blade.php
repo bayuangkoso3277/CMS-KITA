@@ -14,6 +14,54 @@
                 </div>
             </div>
         </div>
+        <div class="doctor-list-blk">
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget border-right-bg">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-01.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>30</h4>
+                    <h5>Waiting</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget border-right-bg">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-02.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>20</h4>
+                    <h5>Pasien Lama</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget border-right-bg">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-03.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>10</h4>
+                    <h5>Pasien Baru</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="doctor-widget">
+                <div class="doctor-box-icon flex-shrink-0">
+                    <img src="assets/img/icons/doctor-dash-04.svg" alt="">
+                </div>
+                <div class="doctor-content dash-count flex-grow-1">
+                    <h4>60</h4>
+                    <h5>Total Pasien</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         <div class="row">
             <div class="col-sm-12">
@@ -46,7 +94,7 @@
                         </div>
 
                         <div class="table-responsive" style="padding:10px">
-                            <table class="table border-0 custom-table comman-table datatable">
+                            <table class="table border-0 custom-table comman-table datatableloket">
                                 <thead>
                                     <tr>
                                         <th>No Urut</th>
@@ -58,77 +106,67 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>A001</td>
-                                        <td>PSN23032500001</td>
-                                        <td>Indra</td>
-                                        <td>Laki-Laki</td>
-                                        <td>Lama</td>
-                                        <td><button class="custom-badge status-green ">In Progress</button></td>
-                                        <td class="text-end">
-                                                    <div class="dropdown dropdown-action">
-                                                        <a href="#" class="action-icon dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                class="fa fa-ellipsis-v"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="edit-department.html"><i
-                                                                    class="fa-solid fa-pen-to-square m-r-5"></i>
-                                                                Varifikasi Data</a>
-                                                        </div>
-                                                    </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>A002</td>
-                                        <td>PSN23032500002</td>
-                                        <td>Badru</td>
-                                        <td>Laki-Laki</td>
-                                        <td>Baru</td>
-                                        <td><button class="custom-badge status-pink ">Waiting</button></td>
-                                        <td class="text-end">
-                                                    <div class="dropdown dropdown-action">
-                                                        <a href="#" class="action-icon dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                class="fa fa-ellipsis-v"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="edit-department.html"><i
-                                                                    class="fa-solid fa-search m-r-5"></i>
-                                                            Cari riwayat</a>
-                                                            <a class="dropdown-item" href="edit-department.html"><i
-                                                                    class="fa-solid fa-pen-to-square m-r-5"></i>
-                                                            Tulis Rekam medis</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                    </tr>
-                                    <tr>
-                                        <td>A003</td>
-                                        <td>PSN23032500023</td>
-                                        <td>Bayu</td>
-                                        <td>Laki-Laki</td>
-                                        <td>Baru</td>
-                                        <td><button class="custom-badge status-green ">In Progress</button></td>
-                                        <td class="text-end">
-                                                    <div class="dropdown dropdown-action">
-                                                        <a href="#" class="action-icon dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                class="fa fa-ellipsis-v"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="edit-department.html"><i
-                                                                    class="fa-solid fa-pen-to-square m-r-5"></i>
-                                                                Varifikasi Data</a>
-                                                        </div>
-                                                    </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                <tbody></tbody>
                             </table>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+
+    var dataTableloket = $('.datatableloket').DataTable({
+		bDestroy:true,
+		processing:true,
+		serverSide:true,
+        columns:[
+			{data:"no_antrian"},
+			{data:"no_rm"},
+            {data:"name"},
+            {data:"sex"},
+            {data:"type"},
+            {data:"status"},
+            {data:"action"},
+		],
+        ajax:{
+			url:"{{ url('api/getLoketAntrian') }}",
+			type:"post",
+			dataType:"json",
+			data:{
+				_token:"{{csrf_token()}}",
+			},
+			beforeSend:function(){
+				$(".datatableloket_processing").html("please wait..");
+				$(".datatableloket_processing").css({
+					"text-align":"center",
+					"color":"blue",
+					"font-weight":"bold",
+					"font-style" : "italic"
+				});
+			}
+		}
+    });
+    $(document).on('click','.panggil',function(){
+        var data = $(this).data();
+        $.ajax({
+            url:"{{url('api/updateAntrian')}}",
+            type:'post',
+            data:{
+                _token:"{{csrf_token()}}",
+                id:data.id,
+                counter:data.counter
+            },
+            success: function (response) {
+                if(response.status==true){
+                    dataTableloket.ajax.reload();
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+            }
+        })
+    })
+</script>
 @endSection

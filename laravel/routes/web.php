@@ -21,9 +21,8 @@ Route::get('/', function () {
 });
 
 Route::controller(AntrianController::class)->group(function () {
-    Route::get('/antrian', 'index');
-    Route::get('/antrian/print', 'print');
-    Route::post('/antrian','store');
+    Route::any('/antrian', 'index');
+    Route::get('/antrian/print/{id}', 'print');
 });
 Route::controller(RekamMedisController::class)->group(function () {
     Route::get('/rekam-medis', 'index');
