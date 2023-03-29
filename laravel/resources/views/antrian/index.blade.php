@@ -35,30 +35,6 @@
         </div>
     </div>
     <div class="page-wrapper" style="margin-left:0px !important; margin-top:70px !important">
-        <div class="audio">
-		  	<audio id="in" src="{{url('/assets/audio')}}/in.wav"></audio>
-		  	<audio id="out" src="{{url('/assets/audio')}}/out.wav"></audio>
-		  	<audio id="suarabel" src="{{url('/assets/audio')}}/Airport_Bell.mp3"></audio>
-			<audio id="suarabelnomorurut" src="{{url('/assets/audio')}}/nomor-urut.MP3"></audio>
-			<audio id="suarabelsuarabelloket" src="{{url('/assets/audio')}}/konter.MP3"></audio>
-			<audio id="belas" src="{{url('/assets/audio')}}/belas.MP3"></audio>
-			<audio id="sebelas" src="{{url('/assets/audio')}}/sebelas.MP3"></audio>
-			<audio id="puluh" src="{{url('/assets/audio')}}/puluh.MP3"></audio>
-			<audio id="sepuluh" src="{{url('/assets/audio')}}/sepuluh.MP3"></audio>
-			<audio id="ratus" src="{{url('/assets/audio')}}/ratus.MP3"></audio>
-			<audio id="seratus" src="{{url('/assets/audio')}}/seratus.MP3"></audio>
-			<audio id="suarabelloket1" src="{{url('/assets/audio')}}/1.MP3"></audio>
-			<audio id="suarabelloket2" src="{{url('/assets/audio')}}/2.MP3"></audio>
-			<audio id="suarabelloket3" src="{{url('/assets/audio')}}/3.MP3"></audio>
-			<audio id="suarabelloket4" src="{{url('/assets/audio')}}/4.MP3"></audio>
-			<audio id="suarabelloket5" src="{{url('/assets/audio')}}/5.MP3"></audio>
-			<audio id="suarabelloket6" src="{{url('/assets/audio')}}/6.MP3"></audio>
-			<audio id="suarabelloket7" src="{{url('/assets/audio')}}/7.MP3"></audio>
-			<audio id="suarabelloket8" src="{{url('/assets/audio')}}/8.MP3"></audio>
-			<audio id="suarabelloket9" src="{{url('/assets/audio')}}/9.MP3"></audio>
-			<audio id="suarabelloket10" src="{{url('/assets/audio')}}/sepuluh.MP3"></audio>
-			<audio id="loket" src="{{url('/assets/audio')}}/loket.MP3"></audio>
-       	</div>
         <div class="content">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
@@ -69,7 +45,7 @@
                     </div>
                     <div class="dash-widget">
                         <div class="dash-content antrian">
-                            <h2><div class="counter-count">A001-PG01</div></h2>
+                            <h2><div class="counter-count" id="loket1">-</div></h2>
                         </div>
                     </div>
                     <div class="dash-widget">
@@ -89,36 +65,33 @@
 
             </div>
             <div class="row">
+            @foreach($counter as $row)
+
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
                     <div class="dash-widget">
                         <div class="dash-content antrian">
-                            <h3>Loket 2</h3>
-                            <h2><div class="counter-count-bottom">A002-UM02</div></h2>
+                            <h3>Loket {{$row->no_counter}}</h3>
+                            <h2><div class="counter-count-bottom" id="loket{{$row->no_counter}}">-</div></h2>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <div class="dash-widget">
-                        <div class="dash-content antrian">
-                            <h3>Loket 3</h3>
-                            <h2><div class="counter-count-bottom">A012-PA01</div></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <div class="dash-widget">
-                        <div class="dash-content antrian">
-                            <h3>Loket 4</h3>
-                            <h2><div class="counter-count-bottom">A010-PG02</div></h2>
-                        </div>
-                    </div>
-                </div>
+            @endforeach
             </div>
         </div>
     </div>
 </div>
-<script>
-    responsiveVoice.speak("Antrian Nomor A 0 10  Ke Loket 1",'Indonesian Female');
+<script type="text/javascript">
+    setInterval(function() {
+    $.get("{{url('api/antrian')}}",function(data){
+        if(data.message){
+            responsiveVoice.speak(data.message,'Indonesian Female');
+        }
+        $.each(data.antrian, function(key,value){
+            $('#loket'+value.id_counter).html(value.type_antrian+value.no_antrian)
+        })
+    })
+},10000)
+
 </script>
 </body>
 </html>

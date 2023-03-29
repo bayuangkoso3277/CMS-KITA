@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Antrian\AntrianController;
 use App\Http\Controllers\Loket\LoketController;
+use App\Http\Controllers\RekamMedis\RekamMedisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,13 @@ use App\Http\Controllers\Loket\LoketController;
 Route::get('/', function () {
     return view('pendaftaran/index');
 });
-Route::get('/antrian', [AntrianController::class, 'index']);
+
+Route::controller(AntrianController::class)->group(function () {
+    Route::get('/antrian', 'index');
+    Route::get('/antrian/print', 'print');
+    Route::post('/antrian','store');
+});
+Route::controller(RekamMedisController::class)->group(function () {
+    Route::get('/rekam-medis', 'index');
+});
 Route::get('/loket', [LoketController::class, 'index']);

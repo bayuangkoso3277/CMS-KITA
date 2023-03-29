@@ -9265,6 +9265,7 @@ td.add-remove {
 }
 .page-header {
     margin-bottom: 1.875rem;
+	margin-top: 2rem;
 }
 .invoices-table.custom-table tbody tr {
     box-shadow: none;
@@ -9811,7 +9812,6 @@ textarea.form-control {
 		float: left;
 		font-size: 20px;
 		line-height: 70px;
-		padding: 23px 10px;
 	}
 	.user-active .call-imgs {
 		width: 100%;
