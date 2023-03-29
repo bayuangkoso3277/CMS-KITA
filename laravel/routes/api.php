@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Antrian\AntrianController;
+use App\Http\Controllers\Loket\LoketController;
+use App\Http\Controllers\Api\ApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,6 +18,14 @@ use App\Http\Controllers\Antrian\AntrianController;
 Route::controller(AntrianController::class)->group(function () {
     Route::get('/antrian', 'getAntrian');
 });
+Route::controller(LoketController::class)->group(function () {
+    Route::any('/getLoketAntrian', 'getLoketAntrian');
+});
+
+Route::controller(ApiController::class)->group(function () {
+    Route::post('/updateAntrian', 'updateAntrian');
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

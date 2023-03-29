@@ -32,4 +32,9 @@ class CMSKITA
         }
         return $code.$date.$lastcode;
     }
+
+    public static function getStatusAntrian($key){
+        $status=array("0"=>"<button class='custom-badge status-green '>Waiting</button>","1"=>'<button class="custom-badge status-pink">In Counter</button>',"2"=>"<button class='custom-badge status-yellow '>Waiting Poli</button>");
+        return $status[$key];
+    }
 }
