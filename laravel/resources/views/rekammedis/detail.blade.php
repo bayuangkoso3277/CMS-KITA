@@ -108,7 +108,7 @@
                                   <div class="preview col-md-6">
                                     <center>
                                     <div class="preview-pic tab-content">
-                                      <div class="tab-pane active" id="pic-1"><img src="" />Foto</div>
+                                      <div class="tab-pane active" id="pic-1"><img width="500" height="500" src="{{url('/assets')}}/img/fotoqu.jpeg" /></div>
                                     </div>
                                     </center>
                                   </div>
@@ -226,6 +226,7 @@
                                 </div>
                               </div>
                             </div>
+                          </br>
                             <div class="card mb-4">
                                     <div class="card-body">
                                       <h4>Anamnesis</h4>

@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">PASIEN BARU </a></li>
+                            <li class="breadcrumb-item"><a href="">Rekam Medis </a></li>
                             <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
                         </ul>
                     </div>
@@ -20,10 +20,8 @@
                             <div class="container">
                               <!-- Title -->
                               <div class="d-flex justify-content-between align-items-lg-center py-3 flex-column flex-lg-row">
-                                <h2 class="h5 mb-3 mb-lg-0"><a href="../../pages/admin/customers.html" class="text-muted"><i class="bi bi-arrow-left-square me-2"></i></a>BASIC INFORMATION</h2>
+                                <h2 class="h3 mb-3 mb-lg-0"></a>Rekam Medis</h2>
                                 <div class="hstack gap-3">
-                                  <button class="btn btn-light btn-sm btn-icon-text"><i class="bi bi-x"></i> <span class="text">Cancel</span></button>
-                                  <button class="btn btn-primary btn-sm btn-icon-text"><i class="bi bi-save"></i> <span class="text">Save</span></button> 
                                 </div>
                               </div>
 

@@ -55,27 +55,30 @@
                                         <th>Jenis Kelamin</th>
                                         <th>Poli</th>
                                         <th>Tanggal Rekam Medis</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>G03</td>
-                                        <td>CPSN23032500001</td>
+                                        <td>PSN23032500003</td>
                                         <td>Indra</td>
                                         <td>Laki-Laki</td>
                                         <td>Gigi Kuning</td>
                                         <td>2011-01-25</td>
+                                        <td><span class="badge bg-danger-dark"> pending </span></td>
                                         <td><button class="btn btn-primary btn-sm btn-icon-text"><i class="bi bi-save"></i> <span class="text">Action</span></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>G02</td>
-                                        <td>PSN23032500001</td>
+                                        <td>PSN23032500002</td>
                                         <td>Bayu</td>
                                         <td>Laki-Laki</td>
                                         <td>Gigi Kuning</td>
                                         <td>2011-01-25</td>
+                                        <td><span class="badge bg-success-dark"> done </span></td>
                                         <td><button class="btn btn-primary btn-sm btn-icon-text"><i class="bi bi-save"></i> <span class="text">Action</span></button>
                                         </td>
                                     </tr>
@@ -86,6 +89,18 @@
                                         <td>Laki-Laki</td>
                                         <td>Gigi Kuning</td>
                                         <td>2011-01-25</td>
+                                        <td><span class="badge bg-success-dark"> done </span></td>
+                                        <td><button class="btn btn-primary btn-sm btn-icon-text"><i class="bi bi-save"></i> <span class="text">Action</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>G04</td>
+                                        <td>PSN23032500004</td>
+                                        <td>Rizqi</td>
+                                        <td>Laki-Laki</td>
+                                        <td>Gigi Kuning</td>
+                                        <td>2011-01-25</td>
+                                        <td><span class="badge bg-warning"> waiting </span></td>
                                         <td><button class="btn btn-primary btn-sm btn-icon-text"><i class="bi bi-save"></i> <span class="text">Action</span></button>
                                         </td>
                                     </tr>
