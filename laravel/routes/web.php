@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Antrian\AntrianController;
 use App\Http\Controllers\Loket\LoketController;
 use App\Http\Controllers\RekamMedis\RekamMedisController;
+use App\Http\Controllers\Poli\PoliController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,15 @@ Route::controller(AntrianController::class)->group(function () {
 });
 Route::controller(RekamMedisController::class)->group(function () {
     Route::get('/rekam-medis', 'index');
+    Route::get('/rekam-medis/cari', 'cari');
+    Route::get('/rekam-medis/input', 'input');
+    Route::get('/rekam-medis/detail', 'detail');
 });
 Route::get('/loket', [LoketController::class, 'index']);
 Route::get('/loket/pasien_lama', [LoketController::class, 'pasien_lama']);
 Route::get('/loket/pasien_baru', [LoketController::class, 'pasien_baru']);
+
+Route::controller(PoliController::class)->group(function () {
+    Route::get('/poli', 'index');
+    Route::get('/poli/antri', 'view');
+});

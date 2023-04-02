@@ -1,6 +1,6 @@
-@extends('templates');
-@section('content');
-    <div class="page-wrapper">
+@extends('templates')
+@section('content')
+  <div class="page-wrapper">
         <div class="content">
             <div class="page-header">
                 <div class="row">
@@ -203,3 +203,5 @@
         </div>
     </div>
 @endSection
+
+
