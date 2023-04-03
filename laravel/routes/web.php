@@ -42,4 +42,4 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::controller(PoliController::class)->group(function () {
     Route::get('/poli', 'index');
     Route::get('/poli/antri', 'view');
-});
+}); 

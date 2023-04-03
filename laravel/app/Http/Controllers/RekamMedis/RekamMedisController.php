@@ -21,3 +21,4 @@ class RekamMedisController extends Controller
         return view('rekammedis.detail');
     }
 }
+ 
