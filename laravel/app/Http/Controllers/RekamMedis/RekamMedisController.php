@@ -17,7 +17,7 @@ class RekamMedisController extends Controller
     public function input(){
         return view('rekammedis.input');
     }
-     public function detail(){
+     public function detail(){ 
         return view('rekammedis.detail');
     }
 }

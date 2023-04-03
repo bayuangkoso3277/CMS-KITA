@@ -57,7 +57,7 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody>  
                                     <tr>
                                         <td>CPSN23032500001</td>
                                         <td>Indra</td>
